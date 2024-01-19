@@ -1,0 +1,10 @@
+// in a Laravel controller
+
+return view('greeting', ['name' => 'Alex']);
+
+// in routes/greeting.php
+
+Route::get('/greeting', function () {
+    return view('greeting', ['name' => 'Alex']);
+});
+
