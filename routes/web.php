@@ -16,7 +16,7 @@ Route::get('/movie', function () {
     return view('movie');
 });
 Route::get('/', function () {
-    return view('home');
+    return view('movies');
 });
 
 Route::get('/booking', function () {
@@ -54,7 +54,7 @@ Route::get('/test', function () {
 });
 
 
-Route::get('/movies', [MovieController::class, 'index']);
+Route::get('/', [MovieController::class, 'index']);
 
 Route::post('/register',[AuthController::class,'register'])->name('register');
 Route::post('/logout',[AuthController::class,'logout'])->name('auth.logout');
